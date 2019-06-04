@@ -1,13 +1,15 @@
 {
   "name": "MindMirror",
   "version": "1.0.0",
-	"main": "index.js",
-	"scripts": {
-		"start": "yarn build && yarn run serve",
-		"start:dev": "nodemon --exec babel-node src/server.js",
-		"build": "babel src --out-dir ./dist --source-maps",
-		"serve": "node dist/server.js"
-	},
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn build && yarn run serve",
+    "start:dev": "nodemon --exec babel-node src/server.js",
+    "build": "babel src --out-dir ./dist --source-maps",
+		"serve": "node dist/server.js",
+		"lint": "eslint '**/*.{js,jsx}' --quiet",
+		"lint:fix": "eslint '**/*.{js,jsx}' --fix"
+  },
   "repository": "https://github.com/davidshare/MindMirror.git",
   "author": "davidshare <davidessienshare@gmail.com>",
   "license": "MIT",
@@ -20,6 +22,13 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
     "nodemon": "^1.19.1"
   }
 }
