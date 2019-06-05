@@ -6,6 +6,4 @@ cache:
   - node_modules
 script:
   - yarn
-  - npm run test
-after_success:
   - npm run coveralls
