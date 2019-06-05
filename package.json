@@ -6,6 +6,7 @@
     "start": "yarn build && yarn run serve",
     "start:dev": "nodemon --exec babel-node src/server.js",
     "build": "babel src --out-dir ./dist --source-maps",
+    "coveralls": "cat ./tests/coverage/lcov.info | coveralls",
     "test": "jest --coverage --forceExit",
     "serve": "node dist/server.js",
     "lint": "eslint '**/*.{js,jsx}' --quiet",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
+    "coveralls": "^3.0.3",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
