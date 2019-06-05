@@ -5,6 +5,8 @@ import connection from './helpers/db_conn';
 const client = connection();
 client.connect();
 
+const port = process.env.PORT || 5000;
+
 // client.connect();
 const app = express();
 
@@ -20,9 +22,9 @@ app.get('/now', async (req, res) => {
   res.status(200).json({now: result.rows[0].now });
 });
 
-app.listen(3001);
+app.listen(port);
 
 /* eslint-disable-next-line */
-console.log('app running on port ', 3001);
+console.log('app running on port ', port);
 
 export default app;
