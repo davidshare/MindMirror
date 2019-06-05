@@ -6,6 +6,7 @@
     "start": "yarn build && yarn run serve",
     "start:dev": "nodemon --exec babel-node src/server.js",
     "build": "babel src --out-dir ./dist --source-maps",
+    "test": "jest --coverage --forceExit",
     "serve": "node dist/server.js",
     "lint": "eslint '**/*.{js,jsx}' --quiet",
     "lint:fix": "eslint '**/*.{js,jsx}' --fix"
@@ -24,10 +25,12 @@
     "@babel/node": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/register": "^7.4.4",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -35,6 +38,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
     "husky": "^2.3.0",
+    "jest": "^24.8.0",
     "nodemon": "^1.19.1"
   }
 }
