@@ -12,3 +12,10 @@ describe('Test the root route', () => {
     expect(response.body).toBe('Welcome to MindMirror');
   });
 });
+
+describe('Database connection', () => {
+  it('should return a status code of 200', async () => {
+		const response = await request(app).get('/now');
+    expect(response.status).toBe(200);
+  });
+});
