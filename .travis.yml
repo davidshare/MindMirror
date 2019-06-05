@@ -6,4 +6,8 @@ cache:
   - node_modules
 script:
   - yarn
-  - npm run coveralls
+  - yarn run coveralls
+services:
+  - postgresql
+before_script:
+  - psql -c 'create database mindtest;' -U postgres
